@@ -1,0 +1,189 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f7fb;
+  color: #1f2937;
+  line-height: 1.5;
+  padding: 24px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+header h1 {
+  font-size: 2rem;
+  color: #111827;
+}
+
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  gap: 20px;
+}
+
+section {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+section h2 {
+  margin-bottom: 16px;
+  font-size: 1.25rem;
+  color: #1e3a8a;
+}
+
+form {
+  display: grid;
+  gap: 14px;
+}
+
+form div {
+  display: grid;
+  gap: 6px;
+}
+
+label {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+input[type="text"],
+input[type="number"] {
+  padding: 12px 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  font-size: 1rem;
+  outline: none;
+  transition: 0.2s ease;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+}
+
+button {
+  border: none;
+  border-radius: 10px;
+  padding: 10px 14px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-1px);
+  opacity: 0.95;
+}
+
+#bookFormSubmit,
+#searchSubmit {
+  background: #2563eb;
+  color: white;
+}
+
+#bookFormSubmit:hover,
+#searchSubmit:hover {
+  background: #1d4ed8;
+}
+
+#incompleteBookList,
+#completeBookList {
+  display: grid;
+  gap: 14px;
+}
+
+[data-testid="bookItem"] {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-left: 6px solid #2563eb;
+  border-radius: 14px;
+  padding: 16px;
+  transition: 0.2s ease;
+}
+
+[data-testid="bookItem"]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+}
+
+[data-testid="bookItemTitle"] {
+  font-size: 1.15rem;
+  margin-bottom: 8px;
+  color: #0f172a;
+}
+
+[data-testid="bookItemAuthor"],
+[data-testid="bookItemYear"] {
+  margin-bottom: 6px;
+  color: #475569;
+}
+
+[data-testid="bookItem"] div:last-child {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+[data-testid="bookItemIsCompleteButton"] {
+  background: #16a34a;
+  color: white;
+}
+
+[data-testid="bookItemIsCompleteButton"]:hover {
+  background: #15803d;
+}
+
+[data-testid="bookItemDeleteButton"] {
+  background: #dc2626;
+  color: white;
+}
+
+[data-testid="bookItemDeleteButton"]:hover {
+  background: #b91c1c;
+}
+
+[data-testid="bookItemEditButton"] {
+  background: #f59e0b;
+  color: white;
+}
+
+[data-testid="bookItemEditButton"]:hover {
+  background: #d97706;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 16px;
+  }
+
+  section {
+    padding: 16px;
+  }
+
+  [data-testid="bookItem"] div:last-child {
+    flex-direction: column;
+  }
+
+  button {
+    width: 100%;
+  }
+}
